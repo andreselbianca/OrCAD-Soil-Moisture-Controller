@@ -1,0 +1,8 @@
+* source CAD2
+R_R1         0 N00080 R_R1 619k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+R_R2         0 N00098  {r} TC=0,0 
+V_V1         N00068 0 18V
+Q_Q5         N00098 N00080 N00068 Q2N4402
+Q_Q6         N00080 N00080 N00068 Q2N4402
+.PARAM  r=100k

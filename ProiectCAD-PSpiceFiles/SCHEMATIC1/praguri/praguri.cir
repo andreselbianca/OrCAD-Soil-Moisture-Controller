@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-praguri"  [ d:\an 2-etti\tehnici cad-proiecte orcad\proiectcad-pspicefiles\schematic1\praguri.sim ] 
+
+** Creating circuit file "praguri.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../blueled.lib" 
+* From [PSPICE NETLIST] section of C:\Users\bianca\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 600k 100k 1k 
+.MC 10 DC V([OUT]) YMAX OUTPUT ALL SEED=8 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

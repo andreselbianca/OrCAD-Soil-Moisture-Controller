@@ -1,0 +1,9 @@
+* source TEST
+Q_Q1         N00182 N00151 0 BC550C 
+Q_Q2         N00151 N00151 0 BC550C 
+R_Rsenzor         N00182 VCC  {r} TC=0,0 
+R_R1         N00151 VCC R_R1 619k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+V_V2         VCC 0 18
+V_V3         -VCC 0 -18
+.PARAM  r=100k

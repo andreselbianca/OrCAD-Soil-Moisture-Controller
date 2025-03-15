@@ -1,0 +1,128 @@
+
+**** 05/28/24 18:21:43 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\An 2-ETTI\Tehnici CAD-proiecte ORCAD\CAD2-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\bianca\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 100k 600k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CAD2
+R_R1         0 N00080 R_R1 619k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+R_R2         0 N00098  {r} TC=0,0 
+V_V1         N00068 0 18V
+Q_Q5         N00098 N00080 N00068 Q2N4402
+Q_Q6         N00080 N00080 N00068 Q2N4402
+.PARAM  r=100k
+
+**** RESUMING test.cir ****
+.END
+
+**** 05/28/24 18:21:43 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\An 2-ETTI\Tehnici CAD-proiecte ORCAD\CAD2-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N4402         
+               PNP             
+       LEVEL    1            
+          IS  650.600000E-18 
+          BF  108            
+          NF    1            
+         VAF  115.7          
+         IKF    1.115        
+         ISE  146.900000E-15 
+          NE    1.86         
+          BR    3.83         
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC     .715        
+         CJE   19.820000E-12 
+         VJE     .75         
+         MJE     .3357       
+         CJC   14.760000E-12 
+         VJC     .75         
+         MJC     .5383       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  761.300000E-12 
+         XTF    1.7          
+         VTF    5            
+         ITF     .65         
+          TR  115.700000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 05/28/24 18:21:43 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\An 2-ETTI\Tehnici CAD-proiecte ORCAD\CAD2-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            
+           R    1            
+
+
+
+          JOB CONCLUDED
+
+**** 05/28/24 18:21:43 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test"  [ D:\An 2-ETTI\Tehnici CAD-proiecte ORCAD\CAD2-PSpiceFiles\SCHEMATIC1\test.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

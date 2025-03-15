@@ -1,0 +1,239 @@
+
+**** 06/04/24 14:36:13 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-testDC"  [ d:\an 2-etti\tehnici cad-proiecte orcad\proiectcad-pspicefiles\schematic1\testdc.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "testDC.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../blueled.lib" 
+* From [PSPICE NETLIST] section of C:\Users\bianca\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 600k 100k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECTCAD
+R_R1         N00105 VCC R_R1 649k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+R_Rsenzor         N00140 VCC  {r} TC=0,0 
+V_V1         VCC 0 18
+Q_Q1         N00140 N00105 N007722 BC107A 
+Q_Q2         N00105 N00105 N008072 BC107A 
+R_R2         0 N008072 R_R2 1k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R3         0 N007722 R_R3 1k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+V_V2         -VCC 0 -18
+R_R4         N01692 N02095 R_R4 5.36k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+R_R5         N02095 0 R_R5 5.62k TC=0,0 
+.model        R_R5 RES R=1 DEV=1% TC1=0 TC2=0
+R_R6         VREF1 N02162 R_R6 5.36k TC=0,0 
+.model        R_R6 RES R=1 DEV=1% TC1=0 TC2=0
+R_R7         N02162 N02242 R_R7 5.62k TC=0,0 
+.model        R_R7 RES R=1 DEV=1% TC1=0 TC2=0
+R_R8         VCC N03370 R_R8 45.3k TC=0,0 
+.model        R_R8 RES R=1 DEV=1% TC1=0 TC2=0
+R_R9         0 N03370 R_R9 287 TC=0,0 
+.model        R_R9 RES R=1 DEV=1% TC1=0 TC2=0
+R_R10         VCC N06348 R_R10 14.3k TC=0,0 
+.model        R_R10 RES R=1 DEV=1% TC1=0 TC2=0
+R_R11         0 N06348 R_R11 10k TC=0,0 
+.model        R_R11 RES R=1 DEV=1% TC1=0 TC2=0
+R_R12         N06690 VREF2  10k TC=0,0 
+R_R13         N06690 N06785 R_R13 169k TC=0,0 
+.model        R_R13 RES R=1 DEV=2% TC1=0 TC2=0
+R_R14         N07931 N06785  732 TC=0,0 
+D_D1         N07931 0 BlueLED 
+R_R15         N06785 N08572 R_R15 54.9k TC=0,0 
+.model        R_R15 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q3         N08600 N08572 0 BC107A 
+R_R16         N08600 VCC R_R16 634 TC=0,0 
+.model        R_R16 RES R=1 DEV=1% TC1=0 TC2=0
+D_D2         N08600 VCC BlueLED 
+V_V3         N10450 0 1V
+D_D3         N10450 0 BlueLED 
+X_U5         N06690 N02242 VCC -VCC N06785 uA741
+X_U6         N02095 N02162 VCC -VCC N02242 uA741
+X_U7         N06348 VREF2 VCC -VCC VREF2 uA741
+X_U8         N03370 VREF1 VCC -VCC VREF1 uA741
+X_U9         N00140 N01692 VCC -VCC N01692 uA741
+.PARAM  r=100k
+
+**** RESUMING testDC.cir ****
+.END
+
+**** 06/04/24 14:36:13 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-testDC"  [ d:\an 2-etti\tehnici cad-proiecte orcad\proiectcad-pspicefiles\schematic1\testdc.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BlueLED         X_U5.dx         X_U5.dy         X_U6.dx         
+          IS    3.131000E-12  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    4.995                                                        
+          RS   16.215           1               1.000000E-03    1            
+         CJO                                   10.000000E-12                 
+
+
+               X_U6.dy         X_U7.dx         X_U7.dy         X_U8.dx         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03    1            
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U8.dy         X_U9.dx         X_U9.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03 
+         CJO   10.000000E-12                   10.000000E-12 
+
+
+**** 06/04/24 14:36:13 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-testDC"  [ d:\an 2-etti\tehnici cad-proiecte orcad\proiectcad-pspicefiles\schematic1\testdc.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC107A          X_U5.qx         X_U6.qx         X_U7.qx         
+               NPN             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS    7.049000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  375.5            93.75           93.75           93.75         
+          NF    1               1               1               1            
+         VAF  116.3                                                          
+         IKF    4.589                                                        
+         ISE    7.049000E-15                                                 
+          NE    1.281                                                        
+          BR    2.611           1               1               1            
+          NR    1               1               1               1            
+         IKR    5.313                                                        
+         ISC  121.700000E-12                                                 
+          NC    1.865                                                        
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    1.464           0               0               0            
+         CJE   11.500000E-12    0               0               0            
+         VJE     .5              .75             .75             .75         
+         MJE     .2717                                                       
+         CJC    5.380000E-12    0               0               0            
+         VJC     .6218           .75             .75             .75         
+         MJC     .329            .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  451.000000E-12                                                 
+         XTF   17.43                                                         
+         VTF   10                                                            
+         ITF    6.194                                                        
+          TR   10.000000E-09                                                 
+         XTB    1.5                                                          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.42            2.42         
+           D     .87             .87             .87             .87         
+
+
+               X_U8.qx         X_U9.qx         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/04/24 14:36:13 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-testDC"  [ d:\an 2-etti\tehnici cad-proiecte orcad\proiectcad-pspicefiles\schematic1\testdc.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R2            R_R3            R_R4            
+           R    1               1               1               1            
+
+
+               R_R5            R_R6            R_R7            R_R8            
+           R    1               1               1               1            
+
+
+               R_R9            R_R10           R_R11           R_R13           
+           R    1               1               1               1            
+
+
+               R_R15           R_R16           
+           R    1               1            
+
+
+
+          JOB CONCLUDED
+
+**** 06/04/24 14:36:13 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-testDC"  [ d:\an 2-etti\tehnici cad-proiecte orcad\proiectcad-pspicefiles\schematic1\testdc.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .36
+

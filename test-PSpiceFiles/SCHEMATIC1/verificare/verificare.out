@@ -1,0 +1,48 @@
+
+**** 05/28/24 17:21:23 ***** PSpice 23.1.0 (17 April 2024) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-verificare"  [ d:\an 2-etti\tehnici cad-proiecte orcad\test-pspicefiles\schematic1\verificare.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "verificare.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\bianca\cdssetup\OrCAD_PSpice\23.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN VCC 100k 600k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TEST
+Q_Q1         N00182 N00151 0 BC550C 
+Q_Q2         N00151 N00151 0 BC550C 
+R_Rsenzor         N00182 VCC  {r} TC=0,0 
+R_R1         N00151 VCC R_R1 619k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+V_V2         VCC 0 18
+V_V3         -VCC 0 -18
+.PARAM  r=100k
+
+**** RESUMING verificare.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): DC device VCC is undefined
+
